@@ -11,6 +11,8 @@
 ## Screenshots Fase #1 :
 #### Module "PC.v"
 ![](Images/PC.jpg)
+#### Module "MemIns.v"
+![](Images/MemIns.jpg)
 #### Module "SignExtend.v"
 ![](Images/SignExtend.jpg)
 #### Module "ShiftLeft.v"
