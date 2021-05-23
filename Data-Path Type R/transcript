@@ -1,0 +1,287 @@
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# vsim work.TB_DPTR 
+# Start time: 10:23:47 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/TB_DPTR/TB_TRint
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+run
+# ** Note: $stop    : C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v(26)
+#    Time: 100 ns  Iteration: 0  Instance: /TB_DPTR
+# Break in Module TB_DPTR at C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v line 26
+add wave -position end  sim:/TB_DPTR/A1/TRint
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# End time: 10:35:42 on May 16,2021, Elapsed time: 0:11:55
+# Errors: 0, Warnings: 3
+# vsim work.TB_DPTR 
+# Start time: 10:35:42 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+# A time value could not be extracted from the current line
+run
+# ** Note: $stop    : C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v(26)
+#    Time: 100 ns  Iteration: 0  Instance: /TB_DPTR
+# Break in Module TB_DPTR at C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v line 26
+add wave -position end  sim:/TB_DPTR/TB_TRint
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# End time: 10:40:27 on May 16,2021, Elapsed time: 0:04:45
+# Errors: 0, Warnings: 2
+# vsim work.TB_DPTR 
+# Start time: 10:40:27 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# End time: 10:41:29 on May 16,2021, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 2
+# vsim work.TB_DPTR 
+# Start time: 10:41:29 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/TB_DPTR/TB_TRint
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+run
+# ** Note: $stop    : C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v(27)
+#    Time: 100 ns  Iteration: 0  Instance: /TB_DPTR
+# Break in Module TB_DPTR at C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v line 27
+# Compile of BancoReg.v was successful with warnings.
+# Compile of BancoReg.v was successful.
+vsim work.BancoReg
+# End time: 10:56:26 on May 16,2021, Elapsed time: 0:14:57
+# Errors: 0, Warnings: 3
+# vsim work.BancoReg 
+# Start time: 10:56:26 on May 16,2021
+# Loading work.BancoReg
+add wave -position end  sim:/BancoReg/RegWrite
+add wave -position end  sim:/BancoReg/RA1
+add wave -position end  sim:/BancoReg/RA2
+add wave -position end  sim:/BancoReg/WriteData
+add wave -position end  sim:/BancoReg/AW
+add wave -position end  sim:/BancoReg/DR1
+add wave -position end  sim:/BancoReg/DR2
+add wave -position end  sim:/BancoReg/Reg
+force -freeze sim:/BancoReg/RegWrite 1 0
+force -freeze sim:/BancoReg/RA1 1 0
+force -freeze sim:/BancoReg/RA2 0 0
+force -freeze sim:/BancoReg/AW 1000 0
+run
+force -freeze sim:/BancoReg/WriteData 1000 0
+run
+force -freeze sim:/BancoReg/AW 10000 0
+run
+vsim work.DPTR
+# End time: 11:01:04 on May 16,2021, Elapsed time: 0:04:38
+# Errors: 0, Warnings: 1
+# vsim work.DPTR 
+# Start time: 11:01:04 on May 16,2021
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/DPTR/TRint
+add wave -position end  sim:/DPTR/TRZflag
+add wave -position end  sim:/DPTR/c1
+add wave -position end  sim:/DPTR/c2
+add wave -position end  sim:/DPTR/c3
+add wave -position end  sim:/DPTR/c5
+add wave -position end  sim:/DPTR/c10
+add wave -position end  sim:/DPTR/c8
+add wave -position end  sim:/DPTR/c7
+add wave -position end  sim:/DPTR/c9
+add wave -position end  sim:/DPTR/c6
+add wave -position end  sim:/DPTR/c4
+force -freeze sim:/DPTR/TRint 00000000001000101000000000100000 0
+run
+add wave -position end  sim:/DPTR/T1/RegWrite
+add wave -position end  sim:/DPTR/T1/RA1
+add wave -position end  sim:/DPTR/T1/RA2
+add wave -position end  sim:/DPTR/T1/WriteData
+add wave -position end  sim:/DPTR/T1/AW
+add wave -position end  sim:/DPTR/T1/DR1
+add wave -position end  sim:/DPTR/T1/DR2
+add wave -position end  sim:/DPTR/T1/Reg
+# Compile of Mux2_1_32.v was successful.
+vsim work.DPTR
+# End time: 11:09:21 on May 16,2021, Elapsed time: 0:08:17
+# Errors: 0, Warnings: 2
+# vsim work.DPTR 
+# Start time: 11:09:21 on May 16,2021
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/DPTR/TRint
+add wave -position end  sim:/DPTR/TRZflag
+add wave -position end  sim:/DPTR/c1
+add wave -position end  sim:/DPTR/c2
+add wave -position end  sim:/DPTR/c3
+add wave -position end  sim:/DPTR/c5
+add wave -position end  sim:/DPTR/c10
+add wave -position end  sim:/DPTR/c8
+add wave -position end  sim:/DPTR/c7
+add wave -position end  sim:/DPTR/c9
+add wave -position end  sim:/DPTR/c6
+add wave -position end  sim:/DPTR/c4
+force -freeze sim:/DPTR/TRint 00000000001000101000000000100000 0
+run
+add wave -position end  sim:/DPTR/T2/i_op1
+add wave -position end  sim:/DPTR/T2/i_op2
+add wave -position end  sim:/DPTR/T2/Sel
+add wave -position end  sim:/DPTR/T2/Zflag
+add wave -position end  sim:/DPTR/T2/r_out
+add wave -position end  sim:/DPTR/T4/Aop
+add wave -position end  sim:/DPTR/T4/Func
+add wave -position end  sim:/DPTR/T4/AluS
+# Compile of AluControl.v was successful.
+vsim work.DPTR
+# End time: 11:15:59 on May 16,2021, Elapsed time: 0:06:38
+# Errors: 0, Warnings: 2
+# vsim work.DPTR 
+# Start time: 11:15:59 on May 16,2021
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/DPTR/TRint
+add wave -position end  sim:/DPTR/TRZflag
+add wave -position end  sim:/DPTR/c1
+add wave -position end  sim:/DPTR/c2
+add wave -position end  sim:/DPTR/c3
+add wave -position end  sim:/DPTR/c5
+add wave -position end  sim:/DPTR/c10
+add wave -position end  sim:/DPTR/c8
+add wave -position end  sim:/DPTR/c7
+add wave -position end  sim:/DPTR/c9
+add wave -position end  sim:/DPTR/c6
+add wave -position end  sim:/DPTR/c4
+force -freeze sim:/DPTR/TRint 00000000001000101000000000100000 0
+run
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# End time: 11:19:24 on May 16,2021, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 2
+# vsim work.TB_DPTR 
+# Start time: 11:19:24 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/TB_DPTR/TB_TRint
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+run
+# ** Note: $stop    : C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v(27)
+#    Time: 100 ns  Iteration: 0  Instance: /TB_DPTR
+# Break in Module TB_DPTR at C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v line 27
+add wave -position end  sim:/TB_DPTR/A1/T1/RA1
+add wave -position end  sim:/TB_DPTR/A1/T1/RA2
+add wave -position end  sim:/TB_DPTR/A1/T1/WriteData
+add wave -position end  sim:/TB_DPTR/A1/T1/AW
+add wave -position end  sim:/TB_DPTR/A1/T1/DR1
+add wave -position end  sim:/TB_DPTR/A1/T1/DR2
+add wave -position end  sim:/TB_DPTR/A1/T1/Reg
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# End time: 11:22:26 on May 16,2021, Elapsed time: 0:03:02
+# Errors: 0, Warnings: 2
+# vsim work.TB_DPTR 
+# Start time: 11:22:26 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/TB_DPTR/TB_TRint
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+run
+# ** Note: $stop    : C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v(27)
+#    Time: 100 ns  Iteration: 0  Instance: /TB_DPTR
+# Break in Module TB_DPTR at C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v line 27
+add wave -position end  sim:/TB_DPTR/A1/T1/RegWrite
+add wave -position end  sim:/TB_DPTR/A1/T1/RA1
+add wave -position end  sim:/TB_DPTR/A1/T1/RA2
+add wave -position end  sim:/TB_DPTR/A1/T1/WriteData
+add wave -position end  sim:/TB_DPTR/A1/T1/AW
+add wave -position end  sim:/TB_DPTR/A1/T1/DR1
+add wave -position end  sim:/TB_DPTR/A1/T1/DR2
+add wave -position end  sim:/TB_DPTR/A1/T1/Reg
+# Compile of TB_DPTR.v was successful.
+vsim work.TB_DPTR
+# End time: 11:44:22 on May 16,2021, Elapsed time: 0:21:56
+# Errors: 0, Warnings: 2
+# vsim work.TB_DPTR 
+# Start time: 11:44:22 on May 16,2021
+# Loading work.TB_DPTR
+# Loading work.DPTR
+# Loading work.BancoReg
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.AluControl
+# Loading work.UnidadDeControl
+# Loading work.mux2_1_32
+add wave -position end  sim:/TB_DPTR/TB_TRint
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+add wave -position end  sim:/TB_DPTR/A1/c1
+add wave -position end  sim:/TB_DPTR/A1/c2
+add wave -position end  sim:/TB_DPTR/A1/c4
+add wave -position end  sim:/TB_DPTR/A1/c3
+add wave -position end  sim:/TB_DPTR/A1/c10
+add wave -position end  sim:/TB_DPTR/TB_TRZflag
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Note: $stop    : C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v(98)
+#    Time: 1 us  Iteration: 0  Instance: /TB_DPTR
+# Break in Module TB_DPTR at C:/Users/PC/Desktop/Data-Path Type R/TB_DPTR.v line 98
+# End time: 12:24:32 on May 16,2021, Elapsed time: 0:40:10
+# Errors: 0, Warnings: 1

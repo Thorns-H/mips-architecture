@@ -1,0 +1,225 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vAlu
+!s110 1621018919
+!i10b 1
+!s100 ;=9Ol3]8KfOWj3I35fgFO0
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+INh9n[8dEk2h0mV3]2Z:Qa3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/PC/Desktop/Data-Path Type R
+w1621018808
+8C:\Users\PC\Desktop\Data-Path Type R\Alu.v
+FC:\Users\PC\Desktop\Data-Path Type R\Alu.v
+!i122 7
+L0 3 50
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1621018919.000000
+!s107 C:\Users\PC\Desktop\Data-Path Type R\Alu.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\Data-Path Type R\Alu.v|
+!i113 1
+Z4 o-work work1
+Z5 tCvgOpt 0
+n@alu
+vAluControl
+!s110 1621181748
+!i10b 1
+!s100 PdIO7lG]zFkjMAEOGU@CH0
+R0
+IJ8Q;V5]H<Xd13_ZY[9DKj1
+R1
+R2
+w1621181726
+8C:\Users\PC\Desktop\Data-Path Type R\AluControl.v
+FC:\Users\PC\Desktop\Data-Path Type R\AluControl.v
+!i122 29
+L0 3 44
+R3
+r1
+!s85 0
+31
+!s108 1621181748.000000
+!s107 C:\Users\PC\Desktop\Data-Path Type R\AluControl.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\Data-Path Type R\AluControl.v|
+!i113 1
+R4
+R5
+n@alu@control
+vBancoReg
+!s110 1621180556
+!i10b 1
+!s100 ;HhdW>lBi8=bC7X=m<J=i3
+R0
+I9QEME`z5iJ6PjG5;]?;7^0
+R1
+R2
+w1621180424
+8C:\Users\PC\Desktop\Data-Path Type R\BancoReg.v
+FC:\Users\PC\Desktop\Data-Path Type R\BancoReg.v
+!i122 27
+L0 3 32
+R3
+r1
+!s85 0
+31
+!s108 1621180556.000000
+!s107 C:\Users\PC\Desktop\Data-Path Type R\BancoReg.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\Data-Path Type R\BancoReg.v|
+!i113 1
+R4
+R5
+n@banco@reg
+vDPTR
+!s110 1621135554
+!i10b 1
+!s100 Kl8l:DRZTeVL`Q4UNB4Cb1
+R0
+IefO1G=bkYT1iIom7Q76M80
+R1
+R2
+w1621135546
+8C:/Users/PC/Desktop/Data-Path Type R/DPTR.v
+FC:/Users/PC/Desktop/Data-Path Type R/DPTR.v
+!i122 20
+L0 3 64
+R3
+r1
+!s85 0
+31
+!s108 1621135554.000000
+!s107 C:/Users/PC/Desktop/Data-Path Type R/DPTR.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/Data-Path Type R/DPTR.v|
+!i113 1
+R4
+R5
+n@d@p@t@r
+vMem
+!s110 1621132585
+!i10b 1
+!s100 [KCf8Nn9J>VhQaE4OC7LT2
+R0
+IK9]oiYJ4Do6QMbVzOVGg33
+R1
+R2
+w1621131590
+8C:\Users\PC\Desktop\Data-Path Type R\Mem.v
+FC:\Users\PC\Desktop\Data-Path Type R\Mem.v
+!i122 9
+L0 3 22
+R3
+r1
+!s85 0
+31
+!s108 1621132584.000000
+!s107 C:\Users\PC\Desktop\Data-Path Type R\Mem.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\Data-Path Type R\Mem.v|
+!i113 1
+R4
+R5
+n@mem
+vmux21_case
+!s110 1621015382
+!i10b 1
+!s100 nQD]9E`iLiSgo7g=J2nOW0
+R0
+IV0B<glXFbfLcJHKjWW;``1
+R1
+R2
+w1621015343
+Z6 8C:\Users\PC\Desktop\Data-Path Type R\Mux2_1_32.v
+Z7 FC:\Users\PC\Desktop\Data-Path Type R\Mux2_1_32.v
+!i122 4
+Z8 L0 3 23
+R3
+r1
+!s85 0
+31
+!s108 1621015382.000000
+Z9 !s107 C:\Users\PC\Desktop\Data-Path Type R\Mux2_1_32.v|
+Z10 !s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\Data-Path Type R\Mux2_1_32.v|
+!i113 1
+R4
+R5
+vmux2_1_32
+!s110 1621181326
+!i10b 1
+!s100 nz=;J4PcdU?a7UffbWn<i3
+R0
+I^nIIl6?YdVRLOLX<D17Jh3
+R1
+R2
+w1621181312
+R6
+R7
+!i122 28
+R8
+R3
+r1
+!s85 0
+31
+!s108 1621181325.000000
+R9
+R10
+!i113 1
+R4
+R5
+vTB_DPTR
+!s110 1621183442
+!i10b 1
+!s100 2:;D]keEg`^3Ozhc^:jRn3
+R0
+IHom2E1G1E;YS?4Zz^6ngV1
+R1
+R2
+w1621182716
+8C:\Users\PC\Desktop\Data-Path Type R\TB_DPTR.v
+FC:\Users\PC\Desktop\Data-Path Type R\TB_DPTR.v
+!i122 32
+L0 3 101
+R3
+r1
+!s85 0
+31
+!s108 1621183442.000000
+!s107 C:\Users\PC\Desktop\Data-Path Type R\TB_DPTR.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\Data-Path Type R\TB_DPTR.v|
+!i113 1
+R4
+R5
+n@t@b_@d@p@t@r
+vUnidadDeControl
+!s110 1621134871
+!i10b 1
+!s100 kg_1?_1FjjkjJdXlV:c5l0
+R0
+Imic9<BW^jVOPj8fK4V^>=2
+R1
+R2
+w1621134828
+8C:/Users/PC/Desktop/Data-Path Type R/UnidadDeControl.v
+FC:/Users/PC/Desktop/Data-Path Type R/UnidadDeControl.v
+!i122 17
+L0 3 24
+R3
+r1
+!s85 0
+31
+!s108 1621134871.000000
+!s107 C:/Users/PC/Desktop/Data-Path Type R/UnidadDeControl.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/Data-Path Type R/UnidadDeControl.v|
+!i113 1
+R4
+R5
+n@unidad@de@control
