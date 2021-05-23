@@ -1,55 +1,52 @@
 `timescale 1ns/1ns
 
-module ALU(
-    input [31:0]op1,
-    input [31:0]op2,
-    input [2:0]sel,
-    output reg [31:0]rel,
-    output reg zeroflag
+module Alu(
+    input [31:0]i_op1,
+    input [31:0]i_op2,
+    input [3:0]Sel,
+    output reg Zflag,
+    output reg [31:0]r_out
+
 );
 
-always @*
+//////////////////////////
+
+always @* 
 begin
-    case(sel)
-    3'b111:
-    begin
-        rel=op1+op2;  
-    end
-    3'b110:
-    begin
-        rel=op1-op2;
-    end
-    3'b100:
-    begin
-        rel=op1*op2;
-    end
-    3'b000:
-    begin
-        rel=op1/op2;
-    end
-    3'b011:
-    begin
-        rel=op1&op2;
-    end
-    3'b001:
-    begin
-        rel=op1|op2;
-    end
-    3'b010:
-    begin
-        rel=op1<<op2;
-    end
-    3'b101:
-    begin
-        rel=op1^op2;
-    end
+    case(Sel)
+      4'b0000:
+      begin
+        r_out = i_op1 & i_op2;
+      end
+      4'b0001:
+      begin
+        r_out = i_op1 | i_op2;
+      end
+      4'b0010:
+      begin
+        r_out <= i_op1 + i_op2;
+      end
+      4'b0110:
+      begin
+        r_out = i_op1 - i_op2;
+      end
+      4'b0111:
+      begin
+        r_out = (i_op1 < i_op2) ? 1:0;
+      end
+      4'b0011:
+      begin
+        r_out = i_op1 * i_op2;
+      end
+      
     endcase
-if(rel==1)
-begin
-    zeroflag=0;
+    if (r_out>=1)
+      begin
+        Zflag = 1'b0;
+      end
+     else if (r_out<=0)
+        Zflag = 1'b1;
 end
-else begin
-    zeroflag=1;
-end
-end
+
+////////////////////////////////////
 endmodule
