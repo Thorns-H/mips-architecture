@@ -9,8 +9,6 @@ module Alu(
 
 );
 
-//////////////////////////
-
 always @* 
 begin
     case(Sel)
@@ -38,6 +36,9 @@ begin
       begin
         r_out = i_op1 * i_op2;
       end
+      begin
+        
+      end
       
     endcase
     if (r_out>=1)
@@ -48,5 +49,4 @@ begin
         Zflag = 1'b1;
 end
 
-////////////////////////////////////
 endmodule
