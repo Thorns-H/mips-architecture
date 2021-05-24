@@ -36,9 +36,6 @@ begin
       begin
         r_out = i_op1 * i_op2;
       end
-      begin
-        
-      end
       
     endcase
     if (r_out>=1)
