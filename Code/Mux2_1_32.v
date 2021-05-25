@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module mux2_1_32(
+module Mux2_1_32(
     input [31:0]mux_in1,
     input [31:0]mux_in2,
     input mux_s,

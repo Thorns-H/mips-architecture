@@ -23,7 +23,7 @@ begin
         MemToReg = 0;
         AluOp = 001;
         MemToWrite = 0;
-        AluSrc = 0;
+        AluSrc = 1;
         RegWrite = 1;
       end
     endcase

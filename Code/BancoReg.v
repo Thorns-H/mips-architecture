@@ -13,7 +13,7 @@ module BancoReg(
 reg [31:0] Reg [0:31];
 
 initial begin
-    $readmemb("BancoRegTxT",Reg);
+    $readmemb("TestF1_BReg",Reg);
 end
 
 always @* begin 

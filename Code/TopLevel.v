@@ -1,7 +1,7 @@
 `timescale 1ns/1ns
 
 module TopLevel(
-    input [31:0]clk
+    input clk
 );
 
 // Unidad de Control
@@ -15,7 +15,8 @@ wire C_Zflag;
 wire [31:0]C_PC_in,C_PC_out,C_suma_out,C2_suma_out,C_extend_out;
 wire C_branch_out;
 // Memoria de Instrucciones
-wire [31:0]C_InsOut,C2_mux_out;
+wire [31:0]C_InsOut;
+wire [4:0]C2_mux_out;
 
 PC PC1(
     .PC_in(C_PC_in),

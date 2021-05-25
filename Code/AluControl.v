@@ -36,6 +36,10 @@ begin
             begin
               AluS = 4'b0011;
             end
+            6'b000000:
+            begin
+              AluS = 4'b0000;
+            end
         endcase
       end
       
