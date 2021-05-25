@@ -96,8 +96,8 @@ Mux2_1_32 BRAA(
     .mux_out(C_i_op2)
 );
 Mux2_1_32 M2(
-    .mux_in1(C_suma_out),
-    .mux_in2(C2_suma_out),
+    .mux_in1(C2_suma_out),
+    .mux_in2(C_suma_out),
     .mux_s(C_branch_out),
     .mux_out(C_PC_in)
 );
