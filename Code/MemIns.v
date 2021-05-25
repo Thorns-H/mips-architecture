@@ -9,6 +9,7 @@ reg [7:0] MemIns [0:399];
 
 initial begin
     $readmemb("TestF1_MemInst",MemIns);
+    #100;
 end
 
 always @* begin 

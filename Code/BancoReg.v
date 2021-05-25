@@ -14,13 +14,14 @@ reg [31:0] Reg [0:31];
 
 initial begin
     $readmemb("TestF1_BReg",Reg);
+    #100;
 end
 
 always @* begin 
 
    if (RegWrite == 1) 
     begin
-      Reg[AW] = WriteData; 
+      Reg[AW] <= WriteData; 
     end 
   
   DR1 <= Reg[RA1];
