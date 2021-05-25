@@ -36,10 +36,14 @@ begin
       begin
         r_out = i_op1 * i_op2;
       end
+<<<<<<< HEAD
+=======
       4'b0000:
       begin
         r_out = 0;
-      end      
+      end
+>>>>>>> 7d0fe05 (Update Code :()
+      
     endcase
     if (r_out>=1)
       begin

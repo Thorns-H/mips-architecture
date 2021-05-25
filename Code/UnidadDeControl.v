@@ -17,8 +17,8 @@ begin
     case(op)
       6'b000000:
       begin
-        RegDst = 0;
-        Branch = 1;
+        RegDst = 1;
+        Branch = 0;
         MemRead = 0;
         MemToReg = 0;
         AluOp = 001;

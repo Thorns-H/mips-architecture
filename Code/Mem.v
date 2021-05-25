@@ -12,12 +12,7 @@ module Mem(
 reg [31:0] T [0:31];
 
 always @* begin
-
-if (MemRead == 1) 
-    begin
-      T[Adress] <= WriteD;
-    end
-    
+    T[Adress] <= WriteD;
     
   if (MemWrite == 1) 
     begin
