@@ -19,3 +19,6 @@
 ![](Images/ShiftLeft.jpg)
 #### Module "Mux2_1_5.v"
 ![](Images/Mux5Bits.jpg)
+
+#### Test 
+![](Images/Final.jpg)
