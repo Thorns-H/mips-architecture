@@ -2,9 +2,11 @@
 
 module Branch(
     input branch,zeroflag,
-    output branch_out
+    output reg branch_out
 );
 
-assign branch_out = branch & zeroflag;
+always @* begin 
+    branch_out = branch & zeroflag;
+end
 
 endmodule

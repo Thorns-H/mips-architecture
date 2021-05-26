@@ -8,11 +8,11 @@ module MemIns(
 reg [7:0] MemIns [0:399];
 
 initial begin
-    $readmemb("TestF1_MemInst",MemIns);
+    $readmemb("TestF1_MemInst.mem",MemIns);
 end
 
 always @* begin 
-    InsOut<={MemIns[InsDir],MemIns[InsDir+1],MemIns[InsDir+2],MemIns[InsDir+3]};
+    InsOut={MemIns[InsDir],MemIns[InsDir+1],MemIns[InsDir+2],MemIns[InsDir+3]};
 end
 
 endmodule

@@ -5,7 +5,8 @@ module TopLevel(
 );
 
 // Unidad de Control
-wire C_MemToReg,C_MemToWrite,C_RegWrite,C_RegDst,C_Branch,C_MemRead,C_AluSrc,C_shift_out;
+wire C_MemToReg,C_MemToWrite,C_RegWrite,C_RegDst,C_Branch,C_MemRead,C_AluSrc;
+wire [31:0]C_shift_out;
 wire[2:0]C_AluOp;
 // ALU
 wire [31:0]C_i_op1,C_i_op2,C_mux_i_op2,C_r_out,C_Rdata,C_mux_out;
@@ -19,7 +20,7 @@ wire [31:0]C_InsOut;
 wire [4:0]C2_mux_out;
 
 PC PC1(
-    .PC_in(C_PC_in),
+    .PC_in(C_suma_out),
     .clk(clk),
     .PC_out(C_PC_out)
 );
@@ -67,7 +68,7 @@ Alu ALU1(
     .Zflag(C_Zflag),
     .r_out(C_r_out)
 );
-Mem Mem(
+Mem Mem1(
     .MemWrite(C_MemToWrite),
     .MemRead(C_MemRead),
     .Adress(C_r_out),
@@ -88,7 +89,7 @@ Branch B1(
     .zeroflag(C_Zflag),
     .branch_out(C_branch_out)
 );
-Mux2_1_32 M1(
+Mux2_1_32 BRAA(
     .mux_in1(C_mux_i_op2),
     .mux_in2(C_extend_out),
     .mux_s(C_AluSrc),
@@ -101,8 +102,8 @@ Mux2_1_32 M2(
     .mux_out(C_PC_in)
 );
 Mux2_1_32 M3(
-    .mux_in1(C_Rdata),
-    .mux_in2(C_r_out),
+    .mux_in1(C_r_out),
+    .mux_in2(C_Rdata),
     .mux_s(C_MemToReg),
     .mux_out(C_mux_out)
 );

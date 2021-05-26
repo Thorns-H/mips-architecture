@@ -8,18 +8,6 @@ module Mux2_1_32(
 
 );
 
-always @* 
-begin
-    case(mux_s)
-      1'b0:
-      begin
-        mux_out <= mux_in2;
-      end
-      1'b1:
-      begin
-        mux_out <= mux_in1;
-      end
-    endcase
-end
+always @* mux_out = (!mux_s) ? mux_in1 : mux_in2;
 
 endmodule

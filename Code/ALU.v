@@ -22,7 +22,7 @@ begin
       end
       4'b0010:
       begin
-        r_out <= i_op1 + i_op2;
+        r_out = i_op1 + i_op2;
       end
       4'b0110:
       begin
@@ -36,21 +36,12 @@ begin
       begin
         r_out = i_op1 * i_op2;
       end
-<<<<<<< HEAD
-=======
       4'b0000:
       begin
-        r_out = 0;
-      end
->>>>>>> 7d0fe05 (Update Code :()
-      
+        r_out = i_op1<<0;
+      end      
     endcase
-    if (r_out>=1)
-      begin
-        Zflag = 1'b0;
-      end
-     else if (r_out<=0)
-        Zflag = 1'b1;
+    Zflag <= (!r_out) ? 0 : 1;
 end
 
 endmodule

@@ -7,8 +7,8 @@ module PC(
 );
 
 always @(posedge clk)
-begin
-    PC_out<=PC_in;
-end
-
+    begin
+        PC_out = (PC_in) ? PC_in : 32'b0;
+    end
+    
 endmodule

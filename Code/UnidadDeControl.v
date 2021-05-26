@@ -18,12 +18,12 @@ begin
       6'b000000:
       begin
         RegDst = 1;
-        Branch = 0;
+        Branch = 1;
         MemRead = 0;
         MemToReg = 0;
-        AluOp = 001;
+        AluOp = 3'b001;
         MemToWrite = 0;
-        AluSrc = 1;
+        AluSrc = 0;
         RegWrite = 1;
       end
     endcase

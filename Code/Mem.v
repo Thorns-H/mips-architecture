@@ -12,11 +12,17 @@ module Mem(
 reg [31:0] T [0:31];
 
 always @* begin
-    T[Adress] <= WriteD;
+
+if (MemRead == 1) 
+    begin
+      T[Adress] = WriteD;
+      Rdata = 32'bx;
+    end
+    
     
   if (MemWrite == 1) 
     begin
-      Rdata <= T[Adress]; 
+      Rdata = T[Adress]; 
     end
 
 end

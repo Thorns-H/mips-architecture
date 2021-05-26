@@ -17,18 +17,13 @@ initial begin
 end
 
 always @* begin 
-
-   if (RegWrite == 1) 
+  DR1 = Reg[RA1];
+  DR2 = Reg[RA2]; 
+   if (RegWrite == 1)
     begin
-      Reg[AW] = WriteData; 
+      Reg[AW] <= WriteData; 
     end 
   
-  DR1 <= Reg[RA1];
-  DR2 <= Reg[RA2];
-  
-
 end
 
-
 endmodule
-

@@ -7,7 +7,7 @@ module SignExtend(
 
 always @*
 begin
-    extend_out[31:0]<=$signed(extend_in);
+    extend_out=$signed(extend_in);
 end
 
 endmodule
