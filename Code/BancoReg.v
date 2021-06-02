@@ -13,17 +13,17 @@ module BancoReg(
 reg [31:0] Reg [0:31];
 
 initial begin
-    $readmemb("TestF1_BReg",Reg);
+    $readmemb("TestF1_BReg.mem",Reg);
 end
 
 always @* begin 
-  DR1 = Reg[RA1];
-  DR2 = Reg[RA2]; 
+   
    if (RegWrite == 1)
     begin
       Reg[AW] <= WriteData; 
     end 
-  
+  DR1 = Reg[RA1];
+  DR2 = Reg[RA2];
 end
 
 endmodule

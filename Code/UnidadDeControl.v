@@ -18,7 +18,7 @@ begin
       6'b000000:
       begin
         RegDst = 1;
-        Branch = 1;
+        Branch = 0;
         MemRead = 0;
         MemToReg = 0;
         AluOp = 3'b001;
