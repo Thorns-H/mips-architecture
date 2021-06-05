@@ -1,7 +1,7 @@
 # Abraham Magaña Hernández - Equipo #1
 # Seminario de Solución de Problemas de Arquitectura de Computadoras - D13
 # Python 3.9.2 - 03/06/2021
-# Decodificador de Instrucciones de Tipo R (al momento) de MIPS
+# Decodificador de Instrucciones de Tipo R y Tipo I (solo R en lenguaje máquina) al momento.
 
 # Librerias Importadas para la GUI.
 from tkinter import *
@@ -32,6 +32,7 @@ def RTypeFunc():
     mainWindow.iconbitmap("icon.ico")
     mainWindow.geometry("600x350")
     mainWindow.config(bg="#3464eb")
+    mainWindow.resizable(0,0)
     
     # Configuración Gráfica de la Ventana y las Entradas de Datos Default
 
@@ -91,13 +92,75 @@ def RTypeFunc():
 
     # Botones de Funciones, aquí se empieza a trabajar con los valores colocados ya en binario.
 
-    Button(mainWindow,text="Convert",width=10,command=convert).place(x=170,y=290)
-    Button(mainWindow,text="Save",width=10,command=saved).place(x=260,y=290)
+    Button(mainWindow,text="Convert",width=10,command=convertR).place(x=170,y=290)
+    Button(mainWindow,text="Save",width=10,command=savedR).place(x=260,y=290)
     Button(mainWindow,text="Reset",width=10,command=reset).place(x=350,y=290)
 
-# Esta funcións convierte los valores de decimal a binario y también rellena con ceros si hace falta.
-def convert():
-    global delete,InfoLabel,Instruction,InsSave
+def ITypeFunc():
+    global mainTitle,ITypeDesign,IType,Block,IOutput,mainWindow,delete,InsSave
+    global OpCode,OpCodeIn,RSBits,RSBitsIn,RDBits,RDBitsIn,RTBits,RTBitsIn,Funct,FunctIn
+    delete=False
+    InsSave=False
+    root.destroy()
+
+    # Configuración de la nueva ventana.
+
+    mainWindow=Tk()
+    mainWindow.title("I Type Instruction Decoder")
+    mainWindow.iconbitmap("icon.ico")
+    mainWindow.geometry("600x350")
+    mainWindow.config(bg="#3464eb")
+    mainWindow.resizable(0,0)
+    
+    # Configuración Gráfica de la Ventana y las Entradas de Datos Default
+
+    mainTitle=PhotoImage(file="MipsTitle.gif")
+    mainLabel=Label(mainWindow,image=mainTitle,bg="#3464eb")
+    mainLabel.place(x=0,y=3)
+    IType=PhotoImage(file="I3.gif")
+    ITypeDesign=PhotoImage(file="I2.gif")
+    Label(mainWindow,image=IType,bg="#3464eb").place(x=100,y=120)
+    Label(mainWindow,image=ITypeDesign,bg="#3464eb").place(x=100,y=150)
+    OpCode=Entry(mainWindow,width=12)
+    OpCode.insert(0,"000000")
+    OpCode.config(state=DISABLED)
+    OpCode.place(x=107,y=180)
+    RSBits=Entry(mainWindow,width=10)
+    RSBits.insert(0,"000000")
+    RSBits.config(state=DISABLED)
+    RSBits.place(x=178,y=180)
+    RTBits=Entry(mainWindow,width=10)
+    RTBits.insert(0,"000000")
+    RTBits.config(state=DISABLED)
+    RTBits.place(x=242,y=180)
+    Funct=Entry(mainWindow,width=32)
+    Funct.insert(0,"0000000000000000")
+    Funct.config(state=DISABLED)
+    Funct.place(x=302,y=180)
+    IOutput=PhotoImage(file="I1.gif")
+    I3=Label(mainWindow,image=IOutput,bg="#3464eb")
+    I3.place(x=100,y=210)
+
+    # Apartado de Input, aquí entran los valores en decimal en los widget y también su diseño.
+
+    OpCodeIn=Combobox(mainWindow,width=8,values=["LW","SW","BEQ"])
+    OpCodeIn.place(x=107,y=244)
+    RSBitsIn=Entry(mainWindow,width=10)
+    RSBitsIn.place(x=178,y=245)
+    RTBitsIn=Entry(mainWindow,width=10)
+    RTBitsIn.place(x=242,y=245)
+    FunctIn=Entry(mainWindow,width=32)
+    FunctIn.place(x=302,y=245)
+
+    # Botones de Funciones, aquí se empieza a trabajar con los valores colocados ya en binario.
+
+    Button(mainWindow,text="Convert",width=10,command=convertI).place(x=170,y=290)
+    Button(mainWindow,text="Save",width=10,command=savedI).place(x=260,y=290)
+    Button(mainWindow,text="Reset",width=10,command=reset).place(x=350,y=290)
+
+# Esta función convierte los valores de decimal a binario y también rellena con ceros si hace falta.
+def convertR():
+    global delete,InfoLabel,Instruction,InsSave,RSIn,RTIn,RDIn,FunctText
     RSIn=RSBitsIn.get()
     RTIn=RTBitsIn.get()
     RDIn=RDBitsIn.get()
@@ -191,10 +254,87 @@ def convert():
         InfoLabel=Label(mainWindow,text="¡Hay un Error en tu Instrucción!",fg="white",bg="#3464eb")
         InfoLabel.place(x=215,y=320)
         delete=True
-        
+
+def convertI():
+    global delete,InfoLabel,RSIn,RTIn,FunctText,InsSave,Instruction
+    OPCIn=OpCodeIn.get()
+    RSIn=RSBitsIn.get()
+    RTIn=RTBitsIn.get()
+    FunctText=FunctIn.get()
+
+    if OPCIn=="LW":
+        OpCodeOut="110001"
+    elif OPCIn=="SW":
+        OpCodeOut="110101"
+    elif OPCIn=="BEQ":
+        OpCodeOut="001000"
+    else:
+        OpCodeOut="No Value"
+
+    binary(RSIn)
+    RSBits.config(state=NORMAL)
+    RSBits.delete(0,END)
+    if len(y)<5:
+        RSOut=y.zfill(5)
+    elif len(y)>5:
+        RSOut="Too Long"
+    else:
+        RSOut=y
+    RSBits.insert(0,RSOut)
+    RSBits.config(state=DISABLED)
+
+    binary(RTIn)
+    RTBits.config(state=NORMAL)
+    RTBits.delete(0,END)
+    if len(y)<5:
+        RTOut=y.zfill(5)
+    elif len(y)>5:
+        RTOut="Too Long"
+    else:
+        RTOut=y
+    RTBits.insert(0,RTOut)
+    RTBits.config(state=DISABLED)
+
+    binary(FunctText)
+    Funct.config(state=NORMAL)
+    Funct.delete(0,END)
+    if len(y)<16:
+        FunctOut=y.zfill(16)
+    elif len(y)>16:
+        FunctOut="Too Long"
+    else:
+        FunctOut=y
+    Funct.insert(0,FunctOut)
+    Funct.config(state=DISABLED)
+
+    OpCode.config(state=NORMAL)
+    OpCode.delete(0,END)
+    OpCode.insert(0,OpCodeOut)
+    OpCode.config(state=DISABLED)
+
+    Instruction=str(OpCodeOut+str(RSOut)+str(RTOut)+str(FunctOut))
+
+    if len(Instruction)==32:
+        InsSave=True
+        if delete==False:
+            pass
+        else:
+            clear(InfoLabel)
+        InfoLabel=Label(mainWindow,text="¡Instrucción Creada!",fg="white",bg="#3464eb")
+        InfoLabel.place(x=245,y=320)
+        delete=True
+    else:
+        if delete==False:
+            pass
+        else:
+            clear(InfoLabel)
+        InfoLabel=Label(mainWindow,text="¡Hay un Error en tu Instrucción!",fg="white",bg="#3464eb")
+        InfoLabel.place(x=215,y=320)
+        delete=True
+
 # Esta función guarda las intrucciones que esten establecidas y que tengan 32 bits mientras lo preciones.  
-def saved():
-    global Instruction,delete,mainWindow,InfoLabel
+def savedR():
+    global Instruction,delete,mainWindow,InfoLabel,InsSave
 
     if InsSave==True:
         if delete==False:
@@ -212,8 +352,47 @@ def saved():
         InfoLabel=Label(mainWindow,text="¡Error al Guardar Instrucción!",fg="white",bg="#3464eb")
         InfoLabel.place(x=215,y=320)
         delete=True
+        InsSave=False
     if len(Instruction)==32:
         logs=open("Memory.txt","a")
+        machinecode=open("MachineCode.txt","a")
+        firstIndex=-8
+        secondIndex=0
+        MachineWrite=True
+        for i in range(0,4):
+            if MachineWrite==True:
+                machinecode.write(FunctText.lower()+" $"+RDIn+" $"+RSIn+" $"+RTIn+str("\n"))
+                MachineWrite=False
+            else:
+                machinecode.close()
+            firstIndex=firstIndex+8
+            secondIndex=secondIndex+8    
+            logs.write(Instruction[firstIndex:secondIndex]+str("\n"))
+    else:
+        pass
+
+def savedI():
+    global Instruction,delete,mainWindow,InfoLabel,InsSave
+    if InsSave==True:
+        if delete==False:
+            pass
+        else:
+            clear(InfoLabel)
+        InfoLabel=Label(mainWindow,text="¡Instrucción Guardada!",fg="white",bg="#3464eb")
+        InfoLabel.place(x=240,y=320)
+        delete=True
+    else:
+        if delete==False:
+            pass
+        else:
+            clear(InfoLabel)
+        InfoLabel=Label(mainWindow,text="¡Error al Guardar Instrucción!",fg="white",bg="#3464eb")
+        InfoLabel.place(x=215,y=320)
+        delete=True
+        InsSave=False
+    if len(Instruction)==32:
+        logs=open("Memory.txt","a")
+        machinecode=open("MachineCode.txt","a")
         firstIndex=-8
         secondIndex=0
         for i in range(0,4):
@@ -264,6 +443,7 @@ def accept():
         msgLabel=Label(root,text="¡Instrucción de Tipo I!",fg="green1",bg="#3464eb")
         msgLabel.pack()
         delete=True
+        ITypeFunc()
     elif option in [" Instrucción Tipo J"]:
         if delete==False:
             pass
@@ -299,11 +479,5 @@ Instructions=[" Instrucción Tipo R"," Instrucción Tipo I"," Instrucción Tipo 
 insBox=Combobox(root,values=Instructions)
 insBox.pack()
 Button(root,text="Accept",font=("Calibri",10),command=accept).pack(pady=5)
-
-
-mainTitle=PhotoImage(file="MipsTitle.gif")
-RType=PhotoImage(file="R1.gif")
-RTypeDesign=PhotoImage(file="R2.gif")
-ROutput=PhotoImage(file="R3.gif")
 
 root.mainloop()
