@@ -143,7 +143,7 @@ def ITypeFunc():
 
     # Apartado de Input, aquí entran los valores en decimal en los widget y también su diseño.
 
-    OpCodeIn=Combobox(mainWindow,width=8,values=["LW","SW","BEQ"])
+    OpCodeIn=Combobox(mainWindow,width=8,values=["ADDI","ORI","ANDI","SLTI","LW","SW","BEQ"])
     OpCodeIn.place(x=107,y=244)
     RSBitsIn=Entry(mainWindow,width=10)
     RSBitsIn.place(x=178,y=245)
@@ -256,7 +256,7 @@ def convertR():
         delete=True
 
 def convertI():
-    global delete,InfoLabel,RSIn,RTIn,FunctText,InsSave,Instruction
+    global delete,InfoLabel,RSIn,RTIn,FunctText,InsSave,Instruction,OPCIn,FunctOut,FunctText
     OPCIn=OpCodeIn.get()
     RSIn=RSBitsIn.get()
     RTIn=RTBitsIn.get()
@@ -268,6 +268,14 @@ def convertI():
         OpCodeOut="110101"
     elif OPCIn=="BEQ":
         OpCodeOut="001000"
+    elif OPCIn=="ADDI":
+        OpCodeOut="001000"
+    elif OPCIn=="ANDI":
+        OpCodeOut="001100"
+    elif OPCIn=="ORI":
+        OpCodeOut="001101"
+    elif OPCIn=="SLTI":
+        OpCodeOut="001010"
     else:
         OpCodeOut="No Value"
 
@@ -395,7 +403,13 @@ def savedI():
         machinecode=open("MachineCode.txt","a")
         firstIndex=-8
         secondIndex=0
+        MachineWrite=True
         for i in range(0,4):
+            if MachineWrite==True:
+                machinecode.write(OPCIn.lower()+" $"+RSIn+" $"+RTIn+" $ #"+FunctText+str("\n"))
+                MachineWrite=False
+            else:
+                machinecode.close()
             firstIndex=firstIndex+8
             secondIndex=secondIndex+8    
             logs.write(Instruction[firstIndex:secondIndex]+str("\n"))
