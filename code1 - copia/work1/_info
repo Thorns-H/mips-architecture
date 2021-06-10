@@ -1,0 +1,491 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/PC/Desktop/Code
+vAlu
+Z0 !s110 1623199650
+!i10b 1
+!s100 DLFDbL5LWe`IFLn[FcW2B1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IIC36H1FD1k3e^O;Z40BmF1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/PC/Desktop/code1 - copia
+Z4 w1622074161
+8C:/Users/PC/Desktop/code1/ALU.v
+FC:/Users/PC/Desktop/code1/ALU.v
+!i122 37
+Z5 L0 3 45
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1623199649.000000
+!s107 C:/Users/PC/Desktop/code1/ALU.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/ALU.v|
+!i113 1
+Z7 o-work work1
+Z8 tCvgOpt 0
+n@alu
+vAluControl
+R0
+!i10b 1
+!s100 i3JQoB7bcKDe3VjC:O<f?1
+R1
+I=z6W<6mlbfP0CYdWJ16Od2
+R2
+R3
+w1623199640
+8C:\Users\PC\Desktop\code1\AluControl.v
+FC:\Users\PC\Desktop\code1\AluControl.v
+!i122 38
+L0 3 73
+R6
+r1
+!s85 0
+31
+Z9 !s108 1623199650.000000
+!s107 C:\Users\PC\Desktop\code1\AluControl.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\code1\AluControl.v|
+!i113 1
+R7
+R8
+n@alu@control
+vBancoReg
+R0
+!i10b 1
+!s100 J;l=I]<OUQY^01SCi899;0
+R1
+IOG5<]<]S:L5?DJCO=c40j3
+R2
+R3
+w1623196236
+8C:/Users/PC/Desktop/code1/BancoReg.v
+FC:/Users/PC/Desktop/code1/BancoReg.v
+!i122 39
+Z10 L0 3 28
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/BancoReg.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/BancoReg.v|
+!i113 1
+R7
+R8
+n@banco@reg
+vBranch
+R0
+!i10b 1
+!s100 F6TmZTm@5ij[jKi76e7A82
+R1
+IV;KI;i=fR^VJ4Bb?T;11D2
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/Branch.v
+FC:/Users/PC/Desktop/code1/Branch.v
+!i122 40
+L0 3 10
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/Branch.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/Branch.v|
+!i113 1
+R7
+R8
+n@branch
+vEx_Mem
+Z11 !s110 1623201811
+!i10b 1
+!s100 QkSFik;?M?Si6T9nXEoo@0
+R1
+IoMDaX0@A1NZSD7S4VUMbR3
+R2
+Z12 dD:/Universidad/SSPAC/code1 - copia
+w1622762587
+8D:/Universidad/SSPAC/code1 - copia/Ex_Mem.v
+FD:/Universidad/SSPAC/code1 - copia/Ex_Mem.v
+!i122 57
+L0 3 33
+R6
+r1
+!s85 0
+31
+Z13 !s108 1623201811.000000
+!s107 D:/Universidad/SSPAC/code1 - copia/Ex_Mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Universidad/SSPAC/code1 - copia/Ex_Mem.v|
+!i113 1
+Z14 o-work work
+R8
+n@ex_@mem
+vID_EX
+R11
+!i10b 1
+!s100 m<A_RzPSb1zjhZQXgFKOJ0
+R1
+IcAf?fURcJj_fc@fML_f>K3
+R2
+R12
+w1622763194
+8D:/Universidad/SSPAC/code1 - copia/ID_EX.v
+FD:/Universidad/SSPAC/code1 - copia/ID_EX.v
+!i122 58
+R5
+R6
+r1
+!s85 0
+31
+R13
+!s107 D:/Universidad/SSPAC/code1 - copia/ID_EX.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Universidad/SSPAC/code1 - copia/ID_EX.v|
+!i113 1
+R14
+R8
+n@i@d_@e@x
+vIF_ID
+Z15 !s110 1623201812
+!i10b 1
+!s100 I[N1i:o7Qo^cU@XbV?S]G1
+R1
+IDnLOK@3gI2Z6CYVNj`WL52
+R2
+R12
+w1622756398
+8D:/Universidad/SSPAC/code1 - copia/IF_ID.v
+FD:/Universidad/SSPAC/code1 - copia/IF_ID.v
+!i122 59
+L0 3 21
+R6
+r1
+!s85 0
+31
+Z16 !s108 1623201812.000000
+!s107 D:/Universidad/SSPAC/code1 - copia/IF_ID.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Universidad/SSPAC/code1 - copia/IF_ID.v|
+!i113 1
+R14
+R8
+n@i@f_@i@d
+vMem
+R0
+!i10b 1
+!s100 [@?6AC>OA3ll0W1PA2`mP3
+R1
+I@>>HP0M@b^LiPgg;CCzO62
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/Mem.v
+FC:/Users/PC/Desktop/code1/Mem.v
+!i122 41
+R10
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/Mem.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/Mem.v|
+!i113 1
+R7
+R8
+n@mem
+vMem_WB
+R15
+!i10b 1
+!s100 Sf12I6hdmamRFB?deF]cl3
+R1
+ISjIAZVhhzC[9>JA;]bfGE0
+R2
+R12
+w1622763075
+8D:/Universidad/SSPAC/code1 - copia/Mem_WB.v
+FD:/Universidad/SSPAC/code1 - copia/Mem_WB.v
+!i122 60
+L0 3 25
+R6
+r1
+!s85 0
+31
+R16
+!s107 D:/Universidad/SSPAC/code1 - copia/Mem_WB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Universidad/SSPAC/code1 - copia/Mem_WB.v|
+!i113 1
+R14
+R8
+n@mem_@w@b
+vMemIns
+R0
+!i10b 1
+!s100 35?6b2aH0]J_^LIT4DRTA3
+R1
+I@:^E9f6S2g8Ni;MiY:ioO2
+R2
+R3
+w1623199018
+8C:\Users\PC\Desktop\code1\MemIns.v
+FC:\Users\PC\Desktop\code1\MemIns.v
+!i122 42
+Z17 L0 3 16
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:\Users\PC\Desktop\code1\MemIns.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\code1\MemIns.v|
+!i113 1
+R7
+R8
+n@mem@ins
+vMux2_1_32
+R0
+!i10b 1
+!s100 k3]a<80WGGG5Sb@Ai4_Uo1
+R1
+I`=J0588dIo]J9NYmkXozZ3
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/Mux2_1_32.v
+FC:/Users/PC/Desktop/code1/Mux2_1_32.v
+!i122 44
+Z18 L0 3 11
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/Mux2_1_32.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/Mux2_1_32.v|
+!i113 1
+R7
+R8
+n@mux2_1_32
+vMux2_1_5
+R0
+!i10b 1
+!s100 B4`:3;_kDddF0>^hgBcdZ0
+R1
+ImaW==b@aZNfRgGSF1hb0a0
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/Mux2_1_5.v
+FC:/Users/PC/Desktop/code1/Mux2_1_5.v
+!i122 43
+R18
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/Mux2_1_5.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/Mux2_1_5.v|
+!i113 1
+R7
+R8
+n@mux2_1_5
+vPC
+R0
+!i10b 1
+!s100 0DOQlajVzWi_9f`=bXZF93
+R1
+IbL26G2CDQVZESh^2?^DKh1
+R2
+R3
+w1623196221
+8C:/Users/PC/Desktop/code1/PC.v
+FC:/Users/PC/Desktop/code1/PC.v
+!i122 45
+R17
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/PC.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/PC.v|
+!i113 1
+R7
+R8
+n@p@c
+vShiftLeft
+R0
+!i10b 1
+!s100 eiL^]ZP=82izoiG^U;eoc3
+R1
+I8mj]JN^ndTjAiLiD5RFzN2
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/ShiftLeft.v
+FC:/Users/PC/Desktop/code1/ShiftLeft.v
+!i122 46
+Z19 L0 3 8
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/ShiftLeft.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/ShiftLeft.v|
+!i113 1
+R7
+R8
+n@shift@left
+vSignExtend
+R0
+!i10b 1
+!s100 WC?4^E0:_j]ndX[0H4;iO3
+R1
+I;I]]oA>lzg5K7F5b;`RP13
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/SignExtend.v
+FC:/Users/PC/Desktop/code1/SignExtend.v
+!i122 47
+R18
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/SignExtend.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/SignExtend.v|
+!i113 1
+R7
+R8
+n@sign@extend
+vSumador
+Z20 !s110 1623199651
+!i10b 1
+!s100 CPYAgK_WS0>j`JSSHEjho1
+R1
+IOOzkSj>[aZCPGjclhgM8d0
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/Sumador.v
+FC:/Users/PC/Desktop/code1/Sumador.v
+!i122 48
+R19
+R6
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/PC/Desktop/code1/Sumador.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/Sumador.v|
+!i113 1
+R7
+R8
+n@sumador
+vSumador4
+R20
+!i10b 1
+!s100 VkWN;aN4RJnMVVE3XjnU62
+R1
+IG=V8O6NfZk_Q6YdOz4Kmi0
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/Sumador4.v
+FC:/Users/PC/Desktop/code1/Sumador4.v
+!i122 49
+R19
+R6
+r1
+!s85 0
+31
+Z21 !s108 1623199651.000000
+!s107 C:/Users/PC/Desktop/code1/Sumador4.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/Sumador4.v|
+!i113 1
+R7
+R8
+n@sumador4
+vTB_TopLevel
+R20
+!i10b 1
+!s100 =j5S6`_f<BX2aihgnX[<i2
+R1
+Ih1WfXn66Iifgg<5K8^JRF0
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/TB_TopLevel.v
+FC:/Users/PC/Desktop/code1/TB_TopLevel.v
+!i122 50
+L0 2 13
+R6
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/PC/Desktop/code1/TB_TopLevel.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/TB_TopLevel.v|
+!i113 1
+R7
+R8
+n@t@b_@top@level
+vTopLevel
+R20
+!i10b 1
+!s100 2R?UmnE]?6L878B<4aggI3
+R1
+InDGnQF=nS7lTM=OcjMadI3
+R2
+R3
+R4
+8C:/Users/PC/Desktop/code1/TopLevel.v
+FC:/Users/PC/Desktop/code1/TopLevel.v
+!i122 51
+L0 3 115
+R6
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/PC/Desktop/code1/TopLevel.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:/Users/PC/Desktop/code1/TopLevel.v|
+!i113 1
+R7
+R8
+n@top@level
+vUnidadDeControl
+R20
+!i10b 1
+!s100 gU2G]nK5L_2o5^9K]]3Ae3
+R1
+I^E=AR9QAZBX4>Qbj1_^nJ0
+R2
+R3
+w1623199579
+8C:\Users\PC\Desktop\code1\UnidadDeControl.v
+FC:\Users\PC\Desktop\code1\UnidadDeControl.v
+!i122 52
+L0 3 114
+R6
+r1
+!s85 0
+31
+R21
+!s107 C:\Users\PC\Desktop\code1\UnidadDeControl.v|
+!s90 -reportprogress|300|-work|work1|-stats=none|C:\Users\PC\Desktop\code1\UnidadDeControl.v|
+!i113 1
+R7
+R8
+n@unidad@de@control

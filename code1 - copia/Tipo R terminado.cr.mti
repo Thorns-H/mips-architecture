@@ -1,0 +1,141 @@
+C:/Users/PC/Desktop/code1/MemIns.v {1 {vlog -work work1 -stats=none {C:\Users\PC\Desktop\code1\MemIns.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MemIns
+
+Top level modules:
+	MemIns
+
+} {} {}} C:/Users/PC/Desktop/code1/ALU.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Alu
+
+Top level modules:
+	Alu
+
+} {} {}} {D:/Universidad/SSPAC/code1 - copia/Mem_WB.v} {1 {vlog -work work -stats=none {D:/Universidad/SSPAC/code1 - copia/Mem_WB.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mem_WB
+
+Top level modules:
+	Mem_WB
+
+} {} {}} C:/Users/PC/Desktop/code1/TopLevel.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/TopLevel.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TopLevel
+
+Top level modules:
+	TopLevel
+
+} {} {}} C:/Users/PC/Desktop/code1/Sumador.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/Sumador.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sumador
+
+Top level modules:
+	Sumador
+
+} {} {}} C:/Users/PC/Desktop/code1/Branch.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/Branch.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Branch
+
+Top level modules:
+	Branch
+
+} {} {}} {D:/Universidad/SSPAC/code1 - copia/Ex_Mem.v} {1 {vlog -work work -stats=none {D:/Universidad/SSPAC/code1 - copia/Ex_Mem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Ex_Mem
+
+Top level modules:
+	Ex_Mem
+
+} {} {}} C:/Users/PC/Desktop/code1/UnidadDeControl.v {1 {vlog -work work1 -stats=none {C:\Users\PC\Desktop\code1\UnidadDeControl.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UnidadDeControl
+
+Top level modules:
+	UnidadDeControl
+
+} {} {}} C:/Users/PC/Desktop/code1/Sumador4.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/Sumador4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sumador4
+
+Top level modules:
+	Sumador4
+
+} {} {}} C:/Users/PC/Desktop/code1/Mem.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/Mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mem
+
+Top level modules:
+	Mem
+
+} {} {}} C:/Users/PC/Desktop/code1/Mux2_1_32.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/Mux2_1_32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux2_1_32
+
+Top level modules:
+	Mux2_1_32
+
+} {} {}} C:/Users/PC/Desktop/code1/BancoReg.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/BancoReg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BancoReg
+
+Top level modules:
+	BancoReg
+
+} {} {}} C:/Users/PC/Desktop/code1/ShiftLeft.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/ShiftLeft.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ShiftLeft
+
+Top level modules:
+	ShiftLeft
+
+} {} {}} C:/Users/PC/Desktop/code1/SignExtend.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/SignExtend.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SignExtend
+
+Top level modules:
+	SignExtend
+
+} {} {}} C:/Users/PC/Desktop/code1/PC.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/PC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} C:/Users/PC/Desktop/code1/AluControl.v {1 {vlog -work work1 -stats=none {C:\Users\PC\Desktop\code1\AluControl.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AluControl
+
+Top level modules:
+	AluControl
+
+} {} {}} {D:/Universidad/SSPAC/code1 - copia/ID_EX.v} {1 {vlog -work work -stats=none {D:/Universidad/SSPAC/code1 - copia/ID_EX.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ID_EX
+
+Top level modules:
+	ID_EX
+
+} {} {}} {D:/Universidad/SSPAC/code1 - copia/IF_ID.v} {1 {vlog -work work -stats=none {D:/Universidad/SSPAC/code1 - copia/IF_ID.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module IF_ID
+
+Top level modules:
+	IF_ID
+
+} {} {}} C:/Users/PC/Desktop/code1/TB_TopLevel.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/TB_TopLevel.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_TopLevel
+
+Top level modules:
+	TB_TopLevel
+
+} {} {}} C:/Users/PC/Desktop/code1/Mux2_1_5.v {1 {vlog -work work1 -stats=none C:/Users/PC/Desktop/code1/Mux2_1_5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux2_1_5
+
+Top level modules:
+	Mux2_1_5
+
+} {} {}}

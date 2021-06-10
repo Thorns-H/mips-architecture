@@ -1,0 +1,192 @@
+# Compile of MemIns.v was successful.
+# Compile of ALU.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of BancoReg.v was successful.
+# Compile of Branch.v was successful.
+# Compile of Mem.v was successful.
+# Compile of MemIns.v was successful.
+# Compile of Mux2_1_5.v was successful.
+# Compile of Mux2_1_32.v was successful.
+# Compile of PC.v was successful.
+# Compile of ShiftLeft.v was successful.
+# Compile of SignExtend.v was successful.
+# Compile of Sumador.v was successful.
+# Compile of Sumador4.v was successful.
+# Compile of TB_TopLevel.v was successful.
+# Compile of TopLevel.v was successful.
+# Compile of UnidadDeControl.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.TopLevel
+# vsim work.TopLevel 
+# Start time: 19:32:05 on Jun 08,2021
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.MemIns
+# Loading work.UnidadDeControl
+# Loading work.BancoReg
+# Loading work.SignExtend
+# Loading work.ShiftLeft
+# Loading work.AluControl
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.Sumador4
+# Loading work.Sumador
+# Loading work.Branch
+# Loading work.Mux2_1_32
+# Loading work.Mux2_1_5
+add wave -position end  sim:/TopLevel/clk
+add wave -position end  sim:/TopLevel/C_MemToReg
+add wave -position end  sim:/TopLevel/C_MemToWrite
+add wave -position end  sim:/TopLevel/C_RegWrite
+add wave -position end  sim:/TopLevel/C_RegDst
+add wave -position end  sim:/TopLevel/C_Branch
+add wave -position end  sim:/TopLevel/C_MemRead
+add wave -position end  sim:/TopLevel/C_AluSrc
+add wave -position end  sim:/TopLevel/C_shift_out
+add wave -position end  sim:/TopLevel/C_AluOp
+add wave -position end  sim:/TopLevel/C_i_op1
+add wave -position end  sim:/TopLevel/C_i_op2
+add wave -position end  sim:/TopLevel/C_mux_i_op2
+add wave -position end  sim:/TopLevel/C_r_out
+add wave -position end  sim:/TopLevel/C_Rdata
+add wave -position end  sim:/TopLevel/C_mux_out
+add wave -position end  sim:/TopLevel/C_AluS
+add wave -position end  sim:/TopLevel/C_Zflag
+add wave -position end  sim:/TopLevel/C_PC_in
+add wave -position end  sim:/TopLevel/C_PC_out
+add wave -position end  sim:/TopLevel/C_suma_out
+add wave -position end  sim:/TopLevel/C2_suma_out
+add wave -position end  sim:/TopLevel/C_extend_out
+add wave -position end  sim:/TopLevel/C_branch_out
+add wave -position end  sim:/TopLevel/C_InsOut
+add wave -position end  sim:/TopLevel/C2_mux_out
+force -freeze sim:/TopLevel/clk 0 0, 1 {10 ns} -r 20
+run
+# Compile of MemIns.v was successful.
+vsim work.TopLevel
+# End time: 19:37:09 on Jun 08,2021, Elapsed time: 0:05:04
+# Errors: 0, Warnings: 4
+# vsim work.TopLevel 
+# Start time: 19:37:09 on Jun 08,2021
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.MemIns
+# Loading work.UnidadDeControl
+# Loading work.BancoReg
+# Loading work.SignExtend
+# Loading work.ShiftLeft
+# Loading work.AluControl
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.Sumador4
+# Loading work.Sumador
+# Loading work.Branch
+# Loading work.Mux2_1_32
+# Loading work.Mux2_1_5
+add wave -position end  sim:/TopLevel/clk
+add wave -position end  sim:/TopLevel/C_MemToReg
+add wave -position end  sim:/TopLevel/C_MemToWrite
+add wave -position end  sim:/TopLevel/C_RegWrite
+add wave -position end  sim:/TopLevel/C_RegDst
+add wave -position end  sim:/TopLevel/C_Branch
+add wave -position end  sim:/TopLevel/C_MemRead
+add wave -position end  sim:/TopLevel/C_AluSrc
+add wave -position end  sim:/TopLevel/C_shift_out
+add wave -position end  sim:/TopLevel/C_AluOp
+add wave -position end  sim:/TopLevel/C_i_op1
+add wave -position end  sim:/TopLevel/C_i_op2
+add wave -position end  sim:/TopLevel/C_mux_i_op2
+add wave -position end  sim:/TopLevel/C_r_out
+add wave -position end  sim:/TopLevel/C_Rdata
+add wave -position end  sim:/TopLevel/C_mux_out
+add wave -position end  sim:/TopLevel/C_AluS
+add wave -position end  sim:/TopLevel/C_Zflag
+add wave -position end  sim:/TopLevel/C_PC_in
+add wave -position end  sim:/TopLevel/C_PC_out
+add wave -position end  sim:/TopLevel/C_suma_out
+add wave -position end  sim:/TopLevel/C2_suma_out
+add wave -position end  sim:/TopLevel/C_extend_out
+add wave -position end  sim:/TopLevel/C_branch_out
+add wave -position end  sim:/TopLevel/C_InsOut
+add wave -position end  sim:/TopLevel/C2_mux_out
+run
+# Compile of ALU.v was successful.
+# Compile of AluControl.v was successful.
+# Compile of BancoReg.v was successful.
+# Compile of Branch.v was successful.
+# Compile of Mem.v was successful.
+# Compile of MemIns.v was successful.
+# Compile of Mux2_1_5.v was successful.
+# Compile of Mux2_1_32.v was successful.
+# Compile of PC.v was successful.
+# Compile of ShiftLeft.v was successful.
+# Compile of SignExtend.v was successful.
+# Compile of Sumador.v was successful.
+# Compile of Sumador4.v was successful.
+# Compile of TB_TopLevel.v was successful.
+# Compile of TopLevel.v was successful.
+# Compile of UnidadDeControl.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim work.TopLevel
+# End time: 19:47:43 on Jun 08,2021, Elapsed time: 0:10:34
+# Errors: 0, Warnings: 2
+# vsim work.TopLevel 
+# Start time: 19:47:43 on Jun 08,2021
+# Loading work.TopLevel
+# Loading work.PC
+# Loading work.MemIns
+# Loading work.UnidadDeControl
+# Loading work.BancoReg
+# Loading work.SignExtend
+# Loading work.ShiftLeft
+# Loading work.AluControl
+# Loading work.Alu
+# Loading work.Mem
+# Loading work.Sumador4
+# Loading work.Sumador
+# Loading work.Branch
+# Loading work.Mux2_1_32
+# Loading work.Mux2_1_5
+add wave -position end  sim:/TopLevel/clk
+add wave -position end  sim:/TopLevel/C_MemToReg
+add wave -position end  sim:/TopLevel/C_MemToWrite
+add wave -position end  sim:/TopLevel/C_RegWrite
+add wave -position end  sim:/TopLevel/C_RegDst
+add wave -position end  sim:/TopLevel/C_Branch
+add wave -position end  sim:/TopLevel/C_MemRead
+add wave -position end  sim:/TopLevel/C_AluSrc
+add wave -position end  sim:/TopLevel/C_shift_out
+add wave -position end  sim:/TopLevel/C_AluOp
+add wave -position end  sim:/TopLevel/C_i_op1
+add wave -position end  sim:/TopLevel/C_i_op2
+add wave -position end  sim:/TopLevel/C_mux_i_op2
+add wave -position end  sim:/TopLevel/C_r_out
+add wave -position end  sim:/TopLevel/C_Rdata
+add wave -position end  sim:/TopLevel/C_mux_out
+add wave -position end  sim:/TopLevel/C_AluS
+add wave -position end  sim:/TopLevel/C_Zflag
+add wave -position end  sim:/TopLevel/C_PC_in
+add wave -position end  sim:/TopLevel/C_PC_out
+add wave -position end  sim:/TopLevel/C_suma_out
+add wave -position end  sim:/TopLevel/C2_suma_out
+add wave -position end  sim:/TopLevel/C_extend_out
+add wave -position end  sim:/TopLevel/C_branch_out
+add wave -position end  sim:/TopLevel/C_InsOut
+add wave -position end  sim:/TopLevel/C2_mux_out
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 0 ns ###############
+#   Active process: /TopLevel/BR/#IMPLICIT-WIRE(DR1)#42 @ sub-iteration 0
+#     Source: C:/Users/PC/Desktop/code1/TopLevel.v:42
+#   Active process: /TopLevel/ALU1/#IMPLICIT-WIRE(r_out)#64 @ sub-iteration 1
+#     Source: C:/Users/PC/Desktop/code1/TopLevel.v:64
+#   Active process: /TopLevel/M3/#IMPLICIT-WIRE(mux_out)#104 @ sub-iteration 2
+#     Source: C:/Users/PC/Desktop/code1/TopLevel.v:104
+#   Active process: /TopLevel/BR/#ALWAYS#19 @ sub-iteration 3
+#     Source: C:/Users/PC/Desktop/code1/TopLevel.v:42
+#   Active process: /TopLevel/BR/#IMPLICIT-WIRE(DR1)#42 @ sub-iteration 4
+#     Source: C:/Users/PC/Desktop/code1/TopLevel.v:42
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 0 ns.
+# End time: 19:51:20 on Jun 08,2021, Elapsed time: 0:03:37
+# Errors: 1, Warnings: 1
