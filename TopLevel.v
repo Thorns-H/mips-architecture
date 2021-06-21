@@ -38,10 +38,13 @@ wire [31:0]C_ReadData_out,C_B3Dir_out;
 wire [4:0]C_B3Mux_out;
 //cable multiplexor final
 wire [31:0]C_F_mux_out;
-
+//shif left fase 3
+wire [31:0]C_IDEX_shift_left_in,C_IDEX_shift_left_out,C_IDEX_shift_left2_out,C_mux_suma;
+wire C_IDEX_jump_in,C_IDEX_jump_out,C_ExMem_jump_out,C_MemWB_jump_out;
+wire [27:0]C_concatenacion;
 
 PC PC1(
-    .PC_in(C_suma_out),
+    .PC_in(C_PC_in),
     .clk(clk),
     .PC_out(C_PC_out)
 );
@@ -58,6 +61,7 @@ UnidadDeControl UDC(
     .RegDst(C_RegDst),
     .Branch(C_Branch),
     .MemRead(C_MemRead),
+    .jump(C_IDEX_jump_in),
     .AluSrc(C_AluSrc)
 );
 BancoReg BR(
@@ -74,8 +78,12 @@ SignExtend SE(
     .extend_out(C_extend_out)
 );
 ShiftLeft SL(
-    .shift_in(C_Sign_Extend_out),
-    .shift_out(C_shift_out)
+    .shift1_in(C_Sign_Extend_out),
+    .shift1_out(C_shift_out)
+);
+Shift_left_2 SL1(
+    .shift_in(C_Mem_Inst_out[25:0]),
+    .shift_out(C_concatenacion)
 );
 AluControl AC(
     .Aop(C_IDEX_AluOp_out),
@@ -110,6 +118,7 @@ Branch B0(
     .zeroflag(C_Zflag),
     .branch_out(C_branch_out)
 );
+//alu
 Mux2_1_32 ALU(
     .mux_in0(C_Read_D2_out),
     .mux_in1(C_Sign_Extend_out),
@@ -119,8 +128,15 @@ Mux2_1_32 ALU(
 //sumador
 Mux2_1_32 M2(
     .mux_in0(C_suma_out),
-    .mux_in1(C2_suma_out),
+    .mux_in1(C_Add_out),
     .mux_s(C_branch_out),
+    .mux_out(C_mux_suma)
+);
+//pc
+Mux2_1_32 M5(
+    .mux_in0(C_mux_suma),
+    .mux_in1(C_IDEX_shift_left2_out),
+    .mux_s(C_ExMem_jump_out),
     .mux_out(C_PC_in)
 );
 //memoria
@@ -148,6 +164,7 @@ IF_ID B1(
 
 ID_EX B2(
     .clk(clk),
+    .IDEX_jump_in(C_IDEX_jump_in),
     .Read_D1_in(C_i_op1),
     .Read_D2_in(C_mux_i_op2),
     .Sign_Extend_in(C_extend_out),
@@ -162,7 +179,10 @@ ID_EX B2(
     .IDEX_Branch_in(C_Branch),
     .IDEX_MemRead_in(C_MemRead),
     .IDEX_Alusrc_in(C_AluSrc),
+    .shift_left_in(C_IDEX_shift_left_in),
     //
+    .IDEX_jump_out(C_IDEX_jump_out),
+    .shift_left_out(C_IDEX_shift_left_out),
     .IDEX_Alusrc_out(C_IDEX_Alusrc_out),
     .IDEX_AluOp_out(C_IDEX_AluOp_out),
     .IDEX_RegDst_out(C_IDEX_RegDst_out),
@@ -182,6 +202,7 @@ ID_EX B2(
 Ex_Mem B3(
     .clk(clk),
     .Add_in(C2_suma_out),
+    .shift_left2_in(C_IDEX_shift_left_out),
     .ALU_in(C_r_out),
     .B2_in(C_Read_D2_out),
     .Mux_in(C2_mux_out),
@@ -191,7 +212,10 @@ Ex_Mem B3(
     .ExMem_MemRead_in(C_IDEX_MemRead_out),
     .ExMem_Regwrite_in(C_IDEX_RegWrite_out),
     .ExMem_MemToReg_in(C_IDEX_MemToReg_out),
+    .Ex_Mem_jump_in(C_IDEX_jump_out),
     //
+    .Ex_Mem_jump_out(C_ExMem_jump_out),
+    .shift_left2_out(C_IDEX_shift_left2_out),
     .ExMem_Branch_out(C_ExMem_Branch_out),
     .ExMem_MemToWrite_out(C_ExMem_MemToWrite_out),
     .ExMem_MemRead_out(C_ExMem_MemRead_out),
@@ -218,5 +242,13 @@ Mem_WB B4(
     .B3Dir_out(C_B3Dir_out),
     .B3Mux_out(C_B3Mux_out)
 );
+
+Concatenacion T11(
+    .A1(C_concatenacion),
+    .A2(C_PC_Adder_out),
+    .nadd(C_IDEX_shift_left_in)
+
+);
+
 
 endmodule

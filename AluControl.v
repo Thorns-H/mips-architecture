@@ -43,7 +43,7 @@ begin
         endcase
       end
       //lw, Sw, Addi, beq
-      3'b000:
+      3'b110:
       begin
         AluS = 4'b0010;
       end

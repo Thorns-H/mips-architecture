@@ -3,6 +3,7 @@
 module UnidadDeControl(
     input [5:0]op,
     output reg MemToReg,
+    output reg jump,
     output reg MemToWrite,
     output reg [2:0]AluOp,
     output reg RegWrite,
@@ -18,6 +19,7 @@ begin
       //Instrucción de tipo R
       6'b000000:
       begin
+        jump = 0;
         RegDst = 1;
         Branch = 0;
         MemRead = 0;
@@ -30,11 +32,12 @@ begin
       //Addi
       6'b001000:
       begin
+        jump = 0;
         RegDst = 0;
         Branch = 0;
         MemRead = 0;
         MemToReg = 0;
-        AluOp = 3'b000;
+        AluOp = 3'b110;
         MemToWrite = 0;
         AluSrc = 1;
         RegWrite = 1;
@@ -42,6 +45,7 @@ begin
       //Andi
       6'b001100:
       begin
+        jump = 0;
         RegDst = 0;
         Branch = 0;
         MemRead = 0;
@@ -54,6 +58,7 @@ begin
       //Ori
       6'b001101:
       begin
+        jump = 0;
         RegDst = 0;
         Branch = 0;
         MemRead = 0;
@@ -66,6 +71,7 @@ begin
       //Slti
       6'b001010:
       begin
+        jump = 0;
         RegDst = 0;
         Branch = 0;
         MemRead = 0;
@@ -78,11 +84,12 @@ begin
       //lw
       6'b100011:
       begin
+        jump = 0;
         RegDst = 0;
         Branch = 0;
         MemRead = 1;
         MemToReg = 1;
-        AluOp = 3'b000;
+        AluOp = 3'b110;
         MemToWrite = 0;
         AluSrc = 1;
         RegWrite = 1;
@@ -90,11 +97,12 @@ begin
       //Sw
       6'b101011:
       begin
+        jump = 0;
         //RegDst = 1'bx;
         Branch = 0;
         MemRead = 1;
         //MemToReg = 1'bx;
-        AluOp = 3'b000;
+        AluOp = 3'b110;
         MemToWrite = 0;
         AluSrc = 1;
         RegWrite = 0;
@@ -102,6 +110,7 @@ begin
       //Beq
       6'b000100:
       begin
+        jump = 0;
         //RegDst = 1'bx;
         Branch = 1;
         MemRead = 0;
@@ -110,6 +119,19 @@ begin
         MemToWrite = 0;
         AluSrc = 0;
         RegWrite = 1;
+      end
+      //Jump
+      6'b000010:
+      begin
+        jump = 1;
+        //RegDst = 0;
+        //Branch = 0;
+        //MemRead = 0;
+        //MemToReg = 0;
+        //AluOp = 0;
+        //MemToWrite = 0;
+        //AluSrc = 0;
+        //RegWrite = 0;
       end
     endcase
 end
