@@ -122,7 +122,7 @@ Branch B0(
 Mux2_1_32 ALU(
     .mux_in0(C_Read_D2_out),
     .mux_in1(C_Sign_Extend_out),
-    .mux_s(C_AluSrc),
+    .mux_s(C_IDEX_Alusrc_out),
     .mux_out(C_i_op2)
 );
 //sumador
@@ -149,7 +149,7 @@ Mux2_1_32 M3(
 Mux2_1_5 M4(
     .mux_in0(C_Ins_2016_out),
     .mux_in1(C_Ins_1511_out),
-    .mux_s(C_RegDst),
+    .mux_s(C_IDEX_RegDst_out),
     .mux_out(C2_mux_out)
 );
 
@@ -243,12 +243,13 @@ Mem_WB B4(
     .B3Mux_out(C_B3Mux_out)
 );
 
-Concatenacion T11(
+/*Concatenacion T11(
     .A1(C_concatenacion),
     .A2(C_PC_Adder_out),
     .nadd(C_IDEX_shift_left_in)
 
-);
+);*/
 
+assign C_IDEX_shift_left_in = {C_PC_Adder_out[31:28],C_concatenacion[27:0]};
 
 endmodule

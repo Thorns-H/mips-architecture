@@ -87,10 +87,10 @@ begin
         jump = 0;
         RegDst = 0;
         Branch = 0;
-        MemRead = 1;
+        MemRead = 0;
         MemToReg = 1;
         AluOp = 3'b110;
-        MemToWrite = 0;
+        MemToWrite = 1;
         AluSrc = 1;
         RegWrite = 1;
       end

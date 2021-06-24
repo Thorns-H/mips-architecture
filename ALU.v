@@ -12,7 +12,7 @@ module Alu(
 always @* 
 begin
     case(Sel)
-      4'b0000:
+      4'b1110:
       begin
         r_out = i_op1 & i_op2;
       end
@@ -36,7 +36,7 @@ begin
       begin
         r_out = i_op1 * i_op2;
       end
-      4'b0000:
+      4'b1100:
       begin
         r_out = i_op1<<0;
       end      
