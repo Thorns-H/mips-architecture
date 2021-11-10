@@ -29,7 +29,6 @@ def RTypeFunc():
 
     mainWindow=Tk()
     mainWindow.title("R Type Instruction Decoder")
-    mainWindow.iconbitmap("icon.ico")
     mainWindow.geometry("600x350")
     mainWindow.config(bg="#3464eb")
     mainWindow.resizable(0,0)
