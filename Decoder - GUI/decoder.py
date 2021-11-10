@@ -478,7 +478,6 @@ def accept():
 # Ventana Principal, aquí elegimos que Tipo de Instruccion vamos a desarrollar.
 root=Tk()
 root.title("Decoder - Instruction Maker")
-root.iconbitmap("icon.ico")
 root.geometry("400x235")
 root.config(bg="#3464eb")
 root.resizable(0,0)
